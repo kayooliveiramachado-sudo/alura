@@ -1,35 +1,59 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blog</title>
+    <title>Blog - Curiosidades do Flamengo</title>
     <style> 
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+        }
+
         header {
-            background-color: #0000FF;
-            color: #F5F5F5;
+            background-color: #c10000; /* Vermelho Flamengo */
+            color: #ffffff;
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
-            border: 5px solid #FF0000;
+            border: 4px solid #000000; /* Borda preta */
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
         }
+
         main {
-            background-color: #F5F5F5;
-            color: #4682B4;
+            background-color: #ffffff;
+            color: #111111; /* Texto escuro para leitura */
             max-width: 800px;
             margin: 0 auto;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 0 0 8px 8px;
+        }
+
+        h2 {
+            color: #c10000;
+            margin-top: 0;
+        }
+
+        .autor {
+            font-style: italic;
+            color: #666666;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Minha página sobre curiosidades do Flamengo</h1>
-        <p>Vou compartilhar fatos sobre o time do Flamengo, é a forma didática</p>
+        <p>Vou compartilhar fatos sobre o time do Flamengo de forma didática</p>
     </header>
 
     <main>
         <h2>Meu primeiro post</h2>
-        <p>Por: Kayo Mighel</p>
+        <p class="autor">Por: Kayo Mighel</p>
         <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar curiosidades sobre o time Flamengo.</p>
     </main>
 </body>
