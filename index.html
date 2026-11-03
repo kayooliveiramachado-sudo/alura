@@ -4,81 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flamengo - O Mais Querido</title>
+    <style>
+        /* Estilos Globais e Cores */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        header {
+            background-color: #c8102e; /* Vermelho Flamengo */
+            padding: 20px;
+            border-bottom: 4px solid #000000;
+        }
+
+        h1, h2, h3 {
+            margin: 10px 0;
+        }
+
+        h2 {
+            color: #c8102e;
+            border-bottom: 2px solid #c8102e;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Design dos Cards */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            border: 2px solid #333;
+            border-radius: 10px;
+            width: 280px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, border-color 0.3s;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #c8102e;
+        }
+
+        /* Imagens nos Cards */
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #ffffff;
+        }
+
+        .card p {
+            color: #cccccc;
+            font-size: 0.95em;
+        }
+
+        /* Botão Interativo */
+        button {
+            background-color: #c8102e;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #a00c24;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #000000;
+            color: #aaaaaa;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 3px solid #c8102e;
+        }
+
+        footer h3 {
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
 
-<section id="conquistas">
-    <h2>Conquistas</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Copa do Brasil</h3>
-            <p>Uma das grandes conquistas do Mengão!</p>
-        </div>
-    </div>
-</section>
-
-<section id="idolos">
-    <h2>Ídolos do Flamengo</h2>
-
-    <div class="cards">
-        <div class="card">
-            <h3>Zico</h3>
-            <p>O eterno Galinho de Quintino, um dos maiores jogadores da história do clube.</p>
-        </div>
-
-        <div class="card">
-            <h3>Júnior</h3>
-            <p>Ídolo histórico, conhecido por sua técnica e liderança.</p>
-        </div>
-
-        <div class="card">
-            <h3>Adriano</h3>
-            <p>O Imperador, destaque na conquista do Brasileirão de 2009.</p>
-        </div>
-
-        <div class="card">
-            <h3>Gabigol</h3>
-            <p>Herói das Libertadores de 2019 e 2022.</p>
-        </div>
-
-        <div class="card">
-            <h3>Arrascaeta</h3>
-            <p>Craque uruguaio e protagonista de grandes conquistas rubro-negras.</p>
-        </div>
-
-        <div class="card">
-            <h3>Bruno Henrique</h3>
-            <p>Um dos grandes nomes da geração vitoriosa do Flamengo.</p>
-        </div>
-    </div>
-</section>
-
-<section id="paixao">
-    <h2>A Paixão da Nação</h2>
-
-    <p>
-        Ser Flamengo é muito mais que torcer por um time.
-        É carregar uma paixão que atravessa gerações.
-        É vibrar, cantar e apoiar o Mengão em todos os momentos!
-    </p>
-
-    <button onclick="mensagem()">
-        CLIQUE AQUI, NAÇÃO!
-    </button>
-</section>
-
-<footer>
-    <h3>🔴⚫ FLAMENGO 🔴⚫</h3>
-    <p>O Mais Querido do Brasil!</p>
-    <p>Uma vez Flamengo, sempre Flamengo!</p>
-    <p>&copy; 2026 - Site feito por um torcedor rubro-negro.</p>
-</footer>
-
-<script>
-    function mensagem() {
-        alert("Uma vez Flamengo, sempre Flamengo! 🔴⚫");
-    }
-</script>
-
-</body>
-</html>
+<header>
+    <h1>🔴⚫ MENGÃO 🔴⚫
