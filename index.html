@@ -13,21 +13,22 @@
     <style>
         /* Estilos Globais e Tipografia */
         body {
-            font-family: 'Roboto', sans-serif; /* Fonte padrão do corpo */
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #121212;
-            color: #ffffff;
+            color: #ffffff; /* Todas as escritas gerais em branco */
             text-align: center;
             line-height: 1.6;
         }
 
         /* Estilização dos Títulos */
         h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif; /* Fonte para destaques */
+            font-family: 'Montserrat', sans-serif;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin: 10px 0;
+            color: #ffffff; /* Títulos em branco */
         }
 
         header h1 {
@@ -38,7 +39,6 @@
         }
 
         h2 {
-            color: #c8102e;
             font-size: 1.8rem;
             font-weight: 800;
             border-bottom: 3px solid #c8102e;
@@ -71,3 +71,167 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s, border-color 0.3s;
             overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #c8102e;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #ffffff; /* Texto dos cards em branco */
+            font-size: 0.95rem;
+            font-weight: 400;
+        }
+
+        /* Texto da Seção de Paixão */
+        #paixao p {
+            font-size: 1.1rem;
+            color: #ffffff; /* Texto de paixão em branco */
+            max-width: 700px;
+            margin: 0 auto 20px auto;
+        }
+
+        /* Botão Interativo */
+        button {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            background-color: #c8102e;
+            color: #ffffff; /* Texto do botão em branco */
+            border: none;
+            padding: 14px 28px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(200, 16, 46, 0.4);
+        }
+
+        button:hover {
+            background-color: #a00c24;
+            transform: scale(1.03);
+        }
+
+        header {
+            background-color: #c8102e;
+            padding: 25px 20px;
+            border-bottom: 4px solid #000000;
+        }
+
+        footer {
+            background-color: #000000;
+            color: #ffffff; /* Texto do rodapé em branco */
+            padding: 25px 20px;
+            margin-top: 50px;
+            border-top: 3px solid #c8102e;
+            font-size: 0.9rem;
+        }
+
+        footer h3 {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🔴⚫ MENGÃO 🔴⚫</h1>
+</header>
+
+<section id="conquistas">
+    <h2>Conquistas</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x180?text=Copa+do+Brasil" alt="Copa do Brasil">
+            <h3>Copa do Brasil</h3>
+            <p>Uma das grandes conquistas do Mengão!</p>
+        </div>
+    </div>
+</section>
+
+<section id="idolos">
+    <h2>Ídolos do Flamengo</h2>
+
+    <div class="cards">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x180?text=Zico" alt="Zico">
+            <h3>Zico</h3>
+            <p>O eterno Galinho de Quintino, um dos maiores jogadores da história do clube.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x180?text=J%C3%BAnior" alt="Júnior">
+            <h3>Júnior</h3>
+            <p>Ídolo histórico, conhecido por sua técnica e liderança.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x180?text=Adriano" alt="Adriano Imperador">
+            <h3>Adriano</h3>
+            <p>O Imperador, destaque na conquista do Brasileirão de 2009.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x180?text=Gabigol" alt="Gabigol">
+            <h3>Gabigol</h3>
+            <p>Herói das Libertadores de 2019 e 2022.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x180?text=Arrascaeta" alt="Arrascaeta">
+            <h3>Arrascaeta</h3>
+            <p>Craque uruguaio e protagonista de grandes conquistas rubro-negras.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x180?text=Bruno+Henrique" alt="Bruno Henrique">
+            <h3>Bruno Henrique</h3>
+            <p>Um dos grandes nomes da geração vitoriosa do Flamengo.</p>
+        </div>
+    </div>
+</section>
+
+<section id="paixao">
+    <h2>A Paixão da Nação</h2>
+
+    <p>
+        Ser Flamengo é muito mais que torcer por um time.<br>
+        É carregar uma paixão que atravessa gerações.<br>
+        É vibrar, cantar e apoiar o Mengão em todos os momentos!
+    </p>
+
+    <button onclick="mensagem()">
+        CLIQUE AQUI, NAÇÃO!
+    </button>
+</section>
+
+<footer>
+    <h3>🔴⚫ FLAMENGO 🔴⚫</h3>
+    <p>O Mais Querido do Brasil!</p>
+    <p>Uma vez Flamengo, sempre Flamengo!</p>
+    <p>&copy; 2026 - Site feito por um torcedor rubro-negro.</p>
+</footer>
+
+<script>
+    function mensagem() {
+        alert("Uma vez Flamengo, sempre Flamengo! 🔴⚫");
+    }
+</script>
+
+</body>
+</html>
