@@ -1,3 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flamengo - O Mais Querido</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #111;
+            color: white;
+        }
+
+        header {
+            background: #c90016;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 5px solid black;
+        }
+
+        header h1 {
+            font-size: 38px;
+            letter-spacing: 3px;
+        }
+
+        nav {
+            background: #050505;
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff263b;
+        }
+
+        .banner {
+            height: 350px;
+            background:
+                linear-gradient(#0009, #0009),
+                linear-gradient(135deg, #c90016, #111);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .banner h2 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .banner p {
+            font-size: 20px;
+        }
+
+        section {
+            padding: 45px 10%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #ff263b;
+            margin-bottom: 25px;
+            font-size: 30px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #222;
+            padding: 25px;
+            border-radius: 12px;
+            width: 230px;
+            border-bottom: 4px solid #c90016;
+            transition: 0.3s;
+        }
 !DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -34,3 +131,153 @@
     </main>
 </body>
 </html>          o que tem e errado nesse codigo
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: #333;
+        }
+
+        .card h3 {
+            color: #ff263b;
+            margin-bottom: 12px;
+        }
+
+        .historia {
+            background: #1b1b1b;
+            line-height: 1.8;
+        }
+
+        button {
+            background: #c90016;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #ff263b;
+        }
+
+        footer {
+            background: #050505;
+            text-align: center;
+            padding: 25px;
+            border-top: 4px solid #c90016;
+        }
+
+        @media(max-width: 600px) {
+            .banner h2 {
+                font-size: 30px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <style> 
+        header {
+            background-color: #0000FF;
+            color: #F5F5F5;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 5px solid #FF0000;
+        }
+        main {
+            background-color: #F5F5F5;
+            color: #4682B4;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Minha página sobre curiosidades do Flamengo</h1>
+        <p>Vou compartilhar fatos sobre o time do Flamengo, é a forma didática</p>
+    </header>
+
+    <main>
+        <h2>Meu primeiro post</h2>
+        <p>Por: Kayo Mighel</p>
+        <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar curiosidades sobre o time Flamengo.</p>
+    </main>
+</body>
+</html>          o que tem e errado nesse codigo
+
+        <h1>🔴⚫ FLAMENGO 🔴⚫</h1>
+        <p>Uma vez Flamengo, sempre Flamengo!</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#historia">História</a>
+        <a href="#titulos">Títulos</a>
+        <a href="#idolos">Ídolos</a>
+    </nav>
+
+    <div class="banner" id="inicio">
+        <h2>NAÇÃO RUBRO-NEGRA</h2>
+        <p>O orgulho de milhões de torcedores!</p>
+        <button onclick="mensagem()">
+            Mengão até morrer!
+        </button>
+    </div>
+
+    <section id="historia" class="historia">
+        <h2>História do Flamengo</h2>
+
+        <p>
+            O Clube de Regatas do Flamengo foi fundado em
+            17 de novembro de 1895, no Rio de Janeiro.
+            Inicialmente dedicado ao remo, o clube criou
+            seu departamento de futebol em 1911.
+        </p>
+
+        <p>
+            Com uma das maiores torcidas do mundo,
+            o Flamengo construiu uma história marcada
+            por grandes conquistas, jogadores históricos
+            e muita paixão.
+        </p>
+    </section>
+
+    <section id="titulos">
+        <h2>Grandes Conquistas</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Libertadores</h3>
+                <p>Conquistas em 1981, 2019, 2022 e 2025.</p>
+            </div>
+
+            <div class="card">
+                <h3>Mundial</h3>
+                <p>Campeão mundial em 1981.</p>
+            </div>
+
+            <div class="card">
+                <h3>Campeonato Brasileiro</h3>
+                <p>Grandes campanhas e títulos nacionais.</p>
+            </div>
+
+            <div class="card">
+                <h3>Copa do Brasil</h3>
+                <p>Uma
