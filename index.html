@@ -3,235 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flamengo - O Mais Querido</title>
+    <title>Automobili Lamborghini - Arte e Performance Italianas</title>
     
-    <!-- Importação de fontes do Google Fonts -->
+    <!-- Importação de fontes sofisticadas do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Estilos Globais e Tipografia */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #ffffff; /* Todas as escritas gerais em branco */
-            text-align: center;
-            line-height: 1.6;
+        /* Variáveis de Cores e Temas */
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: #141414;
+            --gold-accent: #d4af37;
+            --gold-hover: #f3e5ab;
+            --text-main: #ffffff;
+            --text-muted: #aaaaaa;
+            --border-color: #262626;
         }
 
-        /* Estilização dos Títulos */
-        h1, h2, h3 {
+        /* Reset e Configuração Geral */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: 'Montserrat', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin: 10px 0;
-            color: #ffffff; /* Títulos em branco */
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(10,10,10,0.8) 100%);
+            padding: 25px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--gold-accent);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(8px);
         }
 
         header h1 {
+            font-family: 'Cinzel', serif;
             font-size: 2.2rem;
-            font-weight: 900;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-            margin: 0;
+            color: var(--gold-accent);
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
         }
 
-        h2 {
-            font-size: 1.8rem;
-            font-weight: 800;
-            border-bottom: 3px solid #c8102e;
-            display: inline-block;
-            padding-bottom: 5px;
-            margin-top: 40px;
-            margin-bottom: 25px;
+        header p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
-        section {
+        /* Seção Banner Hero */
+        .hero {
+            position: relative;
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(10, 10, 10, 1)), 
+                        url('https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
             padding: 20px;
-            max-width: 1100px;
+        }
+
+        .hero-content h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 700px;
             margin: 0 auto;
         }
 
-        /* Estilo dos Cards */
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+        /* Container Principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seção Sobre */
+        .sobre {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--gold-accent);
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 2px;
+            background-color: var(--gold-accent);
+            margin: 8px auto 0 auto;
+        }
+
+        .sobre p {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            max-width: 800px;
+            margin: 0 auto 15px auto;
+        }
+
+        /* Grid de Superesportivos */
+        .modelos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
         }
 
         .card {
-            background-color: #1e1e1e;
-            border: 2px solid #333;
-            border-radius: 10px;
-            width: 280px;
-            padding: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s, border-color 0.3s;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
             overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            border-color: #c8102e;
+            transform: translateY(-8px);
+            border-color: var(--gold-accent);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
         }
 
         .card img {
             width: 100%;
-            height: 180px;
+            height: 220px;
             object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
         }
-
-        .card h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .card p {
-            color: #ffffff; /* Texto dos cards em branco */
-            font-size: 0.95rem;
-            font-weight: 400;
-        }
-
-        /* Texto da Seção de Paixão */
-        #paixao p {
-            font-size: 1.1rem;
-            color: #ffffff; /* Texto de paixão em branco */
-            max-width: 700px;
-            margin: 0 auto 20px auto;
-        }
-
-        /* Botão Interativo */
-        button {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-            background-color: #c8102e;
-            color: #ffffff; /* Texto do botão em branco */
-            border: none;
-            padding: 14px 28px;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-            box-shadow: 0 4px 10px rgba(200, 16, 46, 0.4);
-        }
-
-        button:hover {
-            background-color: #a00c24;
-            transform: scale(1.03);
-        }
-
-        header {
-            background-color: #c8102e;
-            padding: 25px 20px;
-            border-bottom: 4px solid #000000;
-        }
-
-        footer {
-            background-color: #000000;
-            color: #ffffff; /* Texto do rodapé em branco */
-            padding: 25px 20px;
-            margin-top: 50px;
-            border-top: 3px solid #c8102e;
-            font-size: 0.9rem;
-        }
-
-        footer h3 {
-            font-size: 1.2rem;
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <h1>🔴⚫ MENGÃO 🔴⚫</h1>
-</header>
-
-<section id="conquistas">
-    <h2>Conquistas</h2>
-    <div class="cards">
-        <div class="card">
-            <img src="https://via.placeholder.com/300x180?text=Copa+do+Brasil" alt="Copa do Brasil">
-            <h3>Copa do Brasil</h3>
-            <p>Uma das grandes conquistas do Mengão!</p>
-        </div>
-    </div>
-</section>
-
-<section id="idolos">
-    <h2>Ídolos do Flamengo</h2>
-
-    <div class="cards">
-        <div class="card">
-            <img src="https://via.placeholder.com/300x180?text=Zico" alt="Zico">
-            <h3>Zico</h3>
-            <p>O eterno Galinho de Quintino, um dos maiores jogadores da história do clube.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300x180?text=J%C3%BAnior" alt="Júnior">
-            <h3>Júnior</h3>
-            <p>Ídolo histórico, conhecido por sua técnica e liderança.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300x180?text=Adriano" alt="Adriano Imperador">
-            <h3>Adriano</h3>
-            <p>O Imperador, destaque na conquista do Brasileirão de 2009.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300x180?text=Gabigol" alt="Gabigol">
-            <h3>Gabigol</h3>
-            <p>Herói das Libertadores de 2019 e 2022.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300x180?text=Arrascaeta" alt="Arrascaeta">
-            <h3>Arrascaeta</h3>
-            <p>Craque uruguaio e protagonista de grandes conquistas rubro-negras.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300x180?text=Bruno+Henrique" alt="Bruno Henrique">
-            <h3>Bruno Henrique</h3>
-            <p>Um dos grandes nomes da geração vitoriosa do Flamengo.</p>
-        </div>
-    </div>
-</section>
-
-<section id="paixao">
-    <h2>A Paixão da Nação</h2>
-
-    <p>
-        Ser Flamengo é muito mais que torcer por um time.<br>
-        É carregar uma paixão que atravessa gerações.<br>
-        É vibrar, cantar e apoiar o Mengão em todos os momentos!
-    </p>
-
-    <button onclick="mensagem()">
-        CLIQUE AQUI, NAÇÃO!
-    </button>
-</section>
-
-<footer>
-    <h3>🔴⚫ FLAMENGO 🔴⚫</h3>
-    <p>O Mais Querido do Brasil!</p>
-    <p>Uma vez Flamengo, sempre Flamengo!</p>
-    <p>&copy; 2026 - Site feito por um torcedor rubro-negro.</p>
-</footer>
-
-<script>
-    function mensagem() {
-        alert("Uma vez Flamengo, sempre Flamengo! 🔴⚫");
-    }
-</script>
-
-</body>
-</html>
